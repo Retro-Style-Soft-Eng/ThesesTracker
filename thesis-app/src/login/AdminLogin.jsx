@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { supabase } from '../lib/helper/supabaseClient.js'; // Make sure the supabase client is correctly imported
 import icon from "../Image/NEU.png";
 import './css/Dashboard-Admin-Style.css';
+import neu from '../Image/NEU.png';
+import user from '../Image/User.png';
+import bell from '../Image/Bell.png';
+import searchicon from '../Image/SearchIcon.png';
+import downbutton from '../Image/DownButton.png';
 
 const AdminLogin = ({ logout }) => {
   const [uploading, setUploading] = useState(false);
@@ -42,7 +47,7 @@ const AdminLogin = ({ logout }) => {
       {/* Navigation Bar */}
       <nav className="navbar">
         <div className="nav-left">
-          <img src={icon} alt="Logo" className="logo" />
+          <img src={neu} alt="Logo" className="logo" />
           <ul className="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#" className="active">Dashboard, You're a ADMIN!</a></li>
@@ -53,12 +58,12 @@ const AdminLogin = ({ logout }) => {
         </div>
         <div className="nav-right">
           <div className="notification-icon">
-            <img src={icon} alt="Bell Icon" className="bell-icon" />
+            <img src={bell} alt="Bell Icon" className="bell-icon" />
           </div>
           <div className="profile-icon">
-            <img src={icon} alt="User Icon" />
+            <img src={user} alt="User Icon" />
             <button className="down-button">
-              <img src={icon} alt="Down Arrow" />
+              <img src={downbutton} alt="Down Arrow" />
             </button>
           </div>
         </div>
@@ -68,7 +73,7 @@ const AdminLogin = ({ logout }) => {
       <div className="dashboard-container">
         <h1>Dashboard</h1>
         <div className="search-bar">
-          <img src={icon} alt="Search Icon" className="search-icon" />
+          <img src={searchicon} alt="Search Icon" className="search-icon" />
           <input type="text" placeholder="Search" />
         </div>
 
