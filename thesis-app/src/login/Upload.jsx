@@ -72,7 +72,7 @@ const Upload = () => {
 
       {/* Display List of Files */}
       <div className="file-list-container">
-        <h2>Bucket</h2>
+        <h2>Theses List</h2>
         {files.length > 0 ? (
           <ul>
             {files.map((file, index) => (
